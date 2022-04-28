@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <link rel="stylesheet" href="morpion.css">
+</head>
+
+<body>
+    <!-- Choisissez votre pion -->
+    <div class="layer">
+        <h1>Choix de l'équipe</h1>
+        <button id="player1" class="btn btn-primary choose" onclick="startMorpion(this.id)">X</button>
+        <button id="player2" class="btn btn-primary choose" onclick="startMorpion(this.id)">0</button>
+    </div>
+
+    <!-- Affichage gain -->
+    <div class="layer2">
+        <h1 id="leGagnant">On a gagné</h1>
+        <button class="btn btn-primary end-game" onclick="winnershow()">Close</button>
+    </div>
+
+    <!-- Affichage match nul-->
+    <div class="layer3">
+        <h1>Match nul !</h1>
+        <button class="btn btn-primary draw" onclick="matchNull()">Try again</button>
+    </div>
+
+    <div class='container'>
+        <h1 class='name'>Morpion</h1>
+
+        <div class='row range'>
+            <div class='col-6 turn player-turn row'>
+                <div class='col-6 score you-score'>0</div>
+                <div class='col-6 you-name' onclick='player1()'>YOU</div>
+            </div>
+            <div class='col-6 turn cpu-turn row'>
+                <div class='col-6' onclick='player2()'>CPU</div>
+                <div class='col-6 cpu-score'>0</div>
+            </div>
+            <div id="showChange"></div>
+        </div>
+
+        <div class='grid-container'>
+            <button class='grid-item' id='item1' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item2' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item3' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item4' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item5' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item6' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item7' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item8' onclick='choiseCase(this.id)'></button>
+            <button class='grid-item' id='item9' onclick='choiseCase(this.id)'></button>
+        </div>
+        <button class="btn reset">RESET</button>
+    </div>
+
+    <script src="morpion.js"></script>
+</body>
+
+</html>
